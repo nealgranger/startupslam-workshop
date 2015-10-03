@@ -19,7 +19,8 @@ export default class Input extends Component {
   onKeyPress(ev) {
     // On enter, submit the chat msg and clear the field
     if (ev.keyCode === 13) {
-      alert('Implement me');
+      this.props.messageSend(this.state.value);
+      this.setState({value: ''});
     }
   }
 
